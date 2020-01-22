@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
+using ProjectDemo.Model;
 
 
 namespace ProjectDemo
@@ -24,6 +25,7 @@ namespace ProjectDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton<Iseller, sellerbo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +42,7 @@ namespace ProjectDemo
             {
                 endpoints.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=selCon}/{action=Search}/{id?}");
+                pattern: "{controller=seller}/{action=Search}/{id?}");
                 //endpoints.MapGet("/", async context =>
                 //{
                 //    await context.Response.WriteAsync("Hello World!");
