@@ -76,6 +76,16 @@ namespace EmployeeManagement.Controllers
             List<Employee> elist = employeeRepository.DisplayDetails();
             return View(elist);
         }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register()
+        {
+            return View();
+        }
 
     }
 }
