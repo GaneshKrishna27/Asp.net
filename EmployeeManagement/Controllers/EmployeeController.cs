@@ -55,7 +55,27 @@ namespace EmployeeManagement.Controllers
         public IActionResult GetAllEmployees()
         {
             List<Employee> elist = (employeeRepository.DisplayDetails()).Where(e=>e.Dept=="cse").ToList();
-            return View("~/Views/Employee/Index.cshtml",elist);
+            return View("Index.cshtml",elist);
         }
+        public IActionResult Create()
+        {
+            Employee emp = employeeRepository.GetEmployee(1);
+            return View(emp);
+        }
+        [HttpPost]
+        public IActionResult Create(int id)
+        {
+            return View("success");
+        }
+        public IActionResult Success()
+        {
+            return View();
+        }
+        public IActionResult List()
+        {
+            List<Employee> elist = employeeRepository.DisplayDetails();
+            return View(elist);
+        }
+
     }
 }

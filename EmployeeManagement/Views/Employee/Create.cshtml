@@ -1,0 +1,53 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div   >
+    <h1>Create</h1>
+</div>
+@using (Html.BeginForm())
+{
+@*<div>
+        Name:@Html.TextBox("TextBox1","Enter name")
+    </div>
+    <div>Address:@Html.TextArea("textarea", "Address")</div>
+    <div>
+        Password:@Html.Password("Password")
+    </div>
+    <div>
+        Program @Html.ListBox("1", new MultiSelectList(new[] { "asp", "asp.net core" }))
+    </div>*@
+
+@*<div>
+        Name @Html.TextBoxFor(m=>m.Name,"enter name")
+    </div>
+    <div>Address @Html.TextArea()</div>
+    <div>
+        Password @Html.PasswordFor(m=>m.Id)
+    </div>
+    <div>
+        Dept @Html.TextAreaFor(m=>m.Dept)
+    </div>*@
+
+@Html.Display("Id")
+<br />
+@Html.DisplayFor(m => m.Id)
+<br />
+@Html.Display("Name")
+<br />
+@Html.DisplayFor(m => m.Name)
+<br />
+@Html.Display("Email")
+<br />
+@Html.EditorFor(m => m.Email)
+<br />
+@Html.Display("Dept")
+<br />
+@Html.EditorFor(m => m.Dept)
+<br />
+<input class="btn btn-primary" type="submit" value="submit" action="EmployeeController/Create/1"/>
+
+
+}

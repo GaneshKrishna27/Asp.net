@@ -1,8 +1,8 @@
 ﻿
-@model EmployeeManagement.Model.Employee
-@{
-    Layout = null;
-}
+@model Employee
+@*@{
+    Layout ="~/Views/Shared/_Layout.cshtml";
+}*@
 
 <!DOCTYPE html>
 
@@ -29,25 +29,25 @@
             <td>@Model.Dept</td>
         </tr>
         @*<tr>
-            <td>@emp1.Id</td>
-            <td>@emp1.Name</td>
-            <td>@emp1.Email</td>
-            <td>@emp1.Dept</td>
-            </tr>*@
+        <td>@emp1.Id</td>
+        <td>@emp1.Name</td>
+        <td>@emp1.Email</td>
+        <td>@emp1.Dept</td>
+        </tr>*@
         @*<tr>
-            <td>
-                @ViewBag.employee.Id
-            </td>
-            <td>
-                @ViewBag.employee.Name
-            </td>
-            <td>
-                @ViewBag.employee.Email
-            </td>
-            <td>
-                @ViewBag.emp*@loyee.Dept
-            </td>
-        </tr>
+        <td>
+            @ViewBag.employee.Id
+        </td>
+        <td>
+            @ViewBag.employee.Name
+        </td>
+        <td>
+            @ViewBag.employee.Email
+        </td>
+        <td>
+            @ViewBag.employee.Dept
+        </td>
+        </tr>*@
         @*<tr>
         <td>@ViewData["id"]</td>
         <td>@ViewData["name"]</td>
