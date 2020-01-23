@@ -9,6 +9,6 @@ namespace EmployeeManagement.Model
     {
         Employee GetEmployee(int id);
         List<Employee> DisplayDetails();
-
+        bool AddEmployee(Employee employee);
     }
 }

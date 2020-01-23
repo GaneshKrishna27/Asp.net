@@ -28,5 +28,10 @@ namespace EmployeeManagement.Model
         {
             return employeeList;
         }
+        public bool AddEmployee(Employee emp)
+        {
+            employeeList.Add(emp);
+            return true;
+        }
     }
 }

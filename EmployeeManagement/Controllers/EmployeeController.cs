@@ -82,9 +82,10 @@ namespace EmployeeManagement.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Register()
+        public IActionResult Register(Employee employee)
         {
-            return View();
+            bool res = employeeRepository.AddEmployee(employee);
+            return RedirectToAction("Index");
         }
 
     }

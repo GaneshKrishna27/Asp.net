@@ -18,6 +18,10 @@ namespace EmployeeManagement.Model
             this.Email = email;
             this.Dept = dept;
         }
+        public Employee()
+        {
+
+        }
 
     }
 }
