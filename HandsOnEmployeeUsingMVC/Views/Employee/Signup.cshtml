@@ -1,0 +1,40 @@
+﻿@model HandsOnEmployeeUsingMVC.Models.Employee
+@{
+    ViewData["Title"] = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Signup</h1>
+
+@using (Html.BeginForm())
+{
+<table class="table table-bordered ">
+    <tr>
+        <td>EmployeeId</td>
+        <td>@Html.TextBoxFor(m => m.EmployeeId)</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>Designation</td>
+        <td>@Html.DropDownListFor(m => m.Designation, ViewBag.Designation as SelectList)</td>
+    </tr>
+    <tr>
+        <td>ProjectName</td>
+        <td>@Html.DropDownListFor(m => m.ProjectName, ViewBag.ProjectName as SelectList)</td>
+    </tr>
+    <tr>
+        <td>Pwd</td>
+        <td>@Html.Password("Pwd")</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+
+            <input type="submit" value="Register"class="btn btn-primary" />
+
+        </td>
+    </tr>
+</table>
+}

@@ -1,0 +1,49 @@
+﻿@model HandsOnMVCUsingModelValidation.Models.User
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+@using (Html.BeginForm())
+{
+<table class="table">
+    <tr>
+        <td>Name</td>
+        <td>@Html.TextBoxFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Html.TextBoxFor(m => m.Email)</td>
+    </tr>
+    <tr>
+        <td>Dateofbirth</td>
+        <td>@Html.TextBoxFor(m => m.Dob,null,new { @type="Date"})</td>
+    </tr>
+
+    <tr>
+        <td>Mobileno</td>
+        <td>@Html.TextBoxFor(m => m.Mobno)</td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        @*<td>@Html.DropDownListFor(m => m.Country,new SelectList( new string[] {"india","us","china","uk" }))</td>*@
+        <td>@Html.DropDownListFor(m=>m.Country,ViewBag.Country as SelectList)</td>
+    <tr>
+        <td>Username</td>
+        <td>@Html.TextBox("Uname")</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.Password("Pwd")</td>
+    </tr>
+    <tr>
+    <td colspan="2">
+        
+        <input type="submit" value="Register"/>
+           
+        </td>
+        </tr>
+    
+</table>
+}
