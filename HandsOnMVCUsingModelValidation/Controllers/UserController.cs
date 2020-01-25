@@ -17,7 +17,7 @@ namespace HandsOnMVCUsingModelValidation.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.Country = new SelectList(new string[] { "india", "us", "china", "uk" });
+            ViewBag.Country = new SelectList(new string[] { "","india", "us", "china", "uk" });
             return View();
         }
         [HttpPost]
@@ -50,7 +50,7 @@ namespace HandsOnMVCUsingModelValidation.Controllers
                 return View();
             }
         }
-        public IActionResult Details(User item)
+        public IActionResult Details([Bind(include:"Name,Pwd")]User item)
         {
             return View(item);
         }

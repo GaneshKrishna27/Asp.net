@@ -6293,11 +6293,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\HandsOnEmployeeUsingMVC\\HandsOnEmployeeUsingMVC.csproj",
+      "projectUniqueName": "D:\\Asp.net\\HandsOnEmployeeUsingMVC\\HandsOnEmployeeUsingMVC.csproj",
       "projectName": "HandsOnEmployeeUsingMVC",
-      "projectPath": "C:\\Users\\Dell\\source\\repos\\HandsOnEmployeeUsingMVC\\HandsOnEmployeeUsingMVC.csproj",
+      "projectPath": "D:\\Asp.net\\HandsOnEmployeeUsingMVC\\HandsOnEmployeeUsingMVC.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\source\\repos\\HandsOnEmployeeUsingMVC\\obj\\",
+      "outputPath": "D:\\Asp.net\\HandsOnEmployeeUsingMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
