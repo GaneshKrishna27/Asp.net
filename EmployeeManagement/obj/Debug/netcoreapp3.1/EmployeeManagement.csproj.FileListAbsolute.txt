@@ -215,3 +215,4 @@ D:\Asp.net\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Creat
 D:\Asp.net\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Success.cshtml.g.cs
 D:\Asp.net\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Employee\List.cshtml.g.cs
 D:\Asp.net\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Register.cshtml.g.cs
+D:\Asp.net\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Employee\Fail.cshtml.g.cs

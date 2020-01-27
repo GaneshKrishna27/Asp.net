@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -16,43 +16,51 @@
     <div class="navbar navbar-inverse navbar-top">
         <div class="container">
             <div class="navbar-header">
-                <h1 class="align-text-top"style="color:red">welcome to CTS</h1>
+                <h1 class="align-text-top" style="color:red">welcome to CTS</h1>
                 <a class="btn-primary" href="#">CTS</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav list-group-horizontal">
-                        <li><a href="/Employee/Index">Display</a></li>
-                        <li>@Html.ActionLink("Details", "Search", "Employee", new { id = 1 })</li>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav list-group-horizontal">
+                    <li><a href="/Employee/Index">Display</a></li>
+                    <li>@Html.ActionLink("Details", "Search", "Employee", new { id = 1 })</li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                @*<ul class="nav navbar-nav list-group-horizontal">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
+                    </ul>*@
+            </div>
+            @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>*@
+            @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+
+            @*<div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                        <li><a asp-page="/Index">Home</a></li>
+                        <li><a asp-page="/About">About</a></li>
+                        <li><a asp-page="/Contact">Contact</a></li>
                     </ul>
-                        @*<ul class="nav navbar-nav list-group-horizontal">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>*@
-</div>
-                    @*<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>*@
-                    @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-                
-                @*<div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </div>*@
 
-                <li><a asp-page="/Index">Home</a></li>
-                <li><a asp-page="/About">About</a></li>
-                <li><a asp-page="/Contact">Contact</a></li>
-            </ul>
-        </div>*@
-                
 
-         </div>  
+        </div>
     </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
     <div>
         @RenderBody()
     </div>

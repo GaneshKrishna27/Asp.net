@@ -7,9 +7,9 @@
 <div   >
     <h1>Create</h1>
 </div>
-@using (Html.BeginForm())
+@*@using (Html.BeginForm())
 {
-@*<div>
+<div>
         Name:@Html.TextBox("TextBox1","Enter name")
     </div>
     <div>Address:@Html.TextArea("textarea", "Address")</div>
@@ -29,7 +29,7 @@
     </div>
     <div>
         Dept @Html.TextAreaFor(m=>m.Dept)
-    </div>*@
+    </div>
 
 @Html.Display("Id")
 <br />
@@ -50,4 +50,28 @@
 <input class="btn btn-primary" type="submit" value="submit" action="EmployeeController/Create/1"/>
 
 
-}
+}*@
+
+<form asp-controller="Employee" asp-action="Create" method="post">
+    <div class="form-row">
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-row">
+        <label asp-for="Email">Email:</label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-row">
+        <label asp-for="Dept">Dept:</label>
+        <select asp-for="Dept" asp-items="Html.GetEnumSelectList<Dept>()"></select>
+        
+    </div>
+    <div asp-validation-summary="All "class=" text-danger"></div>
+    <div class="form-row">
+        @*<input type="submit" value="CreateID"/>*@
+        <button type="submit" value="Create" >Create</button>
+    </div>
+
+</form>

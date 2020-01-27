@@ -54,18 +54,30 @@ namespace EmployeeManagement.Controllers
         }
         public IActionResult GetAllEmployees()
         {
-            List<Employee> elist = (employeeRepository.DisplayDetails()).Where(e=>e.Dept=="cse").ToList();
+            List<Employee> elist = (employeeRepository.DisplayDetails()).Where(e=>e.Dept==Dept.IT).ToList();
             return View("Index.cshtml",elist);
         }
         public IActionResult Create()
         {
-            Employee emp = employeeRepository.GetEmployee(1);
-            return View(emp);
+            //Employee emp = employeeRepository.GetEmployee(1);
+            return View();
         }
         [HttpPost]
-        public IActionResult Create(int id)
+        public IActionResult Create(Employee emp)
         {
-            return View("success");
+            if(ModelState.IsValid)
+            {
+                employeeRepository.AddEmployee(emp);
+                return RedirectToAction("Index");
+            }
+            //else
+            //return View("Fail");
+
+            return View();
+        }
+        public IActionResult Fail()
+        {
+            return View();
         }
         public IActionResult Success()
         {
