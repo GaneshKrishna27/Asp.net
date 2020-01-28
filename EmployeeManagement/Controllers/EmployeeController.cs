@@ -99,6 +99,21 @@ namespace EmployeeManagement.Controllers
             bool res = employeeRepository.AddEmployee(employee);
             return RedirectToAction("Index");
         }
-
+        public bool IsExist(string email)
+        {
+            var result = employeeRepository.DisplayDetails().Find(r => r.Email == email);
+            if (result == null) return true;
+            else return false;
+        }
+        [AcceptVerbs("Get","Post")]
+        //[AllowAnonymous]
+        public JsonResult IsEmailExist(string email)
+        {
+            return IsExist(email) ? Json(true) : Json("email exist");
+        }
+        public IActionResult _myPartial()
+        {
+            return View();
+        }
     }
 }

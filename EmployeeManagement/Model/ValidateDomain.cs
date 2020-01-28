@@ -8,7 +8,7 @@ namespace EmployeeManagement.Model
 {
     public class ValidateDomain:ValidationAttribute
     {
-        private readonly string allowDomain;
+        private readonly string allowDomain; 
         public ValidateDomain(string allowdomain)
         {
             this.allowDomain = allowdomain;

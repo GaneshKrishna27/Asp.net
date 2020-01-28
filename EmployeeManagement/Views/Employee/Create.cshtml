@@ -66,12 +66,12 @@
     <div class="form-row">
         <label asp-for="Dept">Dept:</label>
         <select asp-for="Dept" asp-items="Html.GetEnumSelectList<Dept>()"></select>
-        
+
     </div>
-    <div asp-validation-summary="All "class=" text-danger"></div>
+    <div asp-validation-summary="All " class=" text-danger"></div>
     <div class="form-row">
         @*<input type="submit" value="CreateID"/>*@
-        <button type="submit" value="Create" >Create</button>
+        <button type="submit" value="Create">Create</button>
     </div>
-
-</form>
+    <partial name="~/Views/Employee/_myPartial.cshtml" />
+</form> 
